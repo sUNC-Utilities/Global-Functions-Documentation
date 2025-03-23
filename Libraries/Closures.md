@@ -180,7 +180,7 @@ end
 local ClonedFunction = clonefunction(DummyFunction)
 
 print(debug.info(ClonedFunction, "l")) -- Output: 1
-print(debug.info(ClonedFunction, "n")) -- Output: ClonedFunction
+print(debug.info(ClonedFunction, "n")) -- Output: DummyFunction
 print(ClonedFunction == DummyFunction) -- Output: false
 print(getfenv(ClonedFunction) == getfenv(DummyFunction)) -- Output: true
 ```
