@@ -161,26 +161,26 @@ fireclickdetector(ClickDetector, 32) -- This will not output
 ```luau
 local ClickDetector = Instance.new("ClickDetector")
 
-ClickDetector.MouseClick:Connect(function()
-    print("Fired M1")
+ClickDetector.MouseClick:Connect(function(player)
+    print(`{player.Name} Fired M1`)
 end)
 
-ClickDetector.RightMouseClick:Connect(function()
-    print("Fired M2")
+ClickDetector.RightMouseClick:Connect(function(player)
+    print(`{player.Name} Fired M2`)
 end)
 
-ClickDetector.MouseHoverEnter:Connect(function()
-    print("Fired HoverEnter")
+ClickDetector.MouseHoverEnter:Connect(function(player)
+    print(`{player.Name} Fired HoverEnter`)
 end)
 
-ClickDetector.MouseHoverLeave:Connect(function()
-    print("Fired HoverLeave")
+ClickDetector.MouseHoverLeave:Connect(function(player)
+    print(`{player} Fired HoverLeave`)
 end)
 
-fireclickdetector(ClickDetector, 0, "MouseClick") -- Output: Fired M1
-fireclickdetector(ClickDetector, 0, "RightMouseClick") -- Output: Fired M2
-fireclickdetector(ClickDetector, 0, "MouseHoverEnter") -- Output: Fired HoverEnter
-fireclickdetector(ClickDetector, 0, "MouseHoverLeave") -- Output: Fired HoverLeave
+fireclickdetector(ClickDetector, 0, "MouseClick") -- Output: Player Fired M1
+fireclickdetector(ClickDetector, 0, "RightMouseClick") -- Output: Player Fired M2
+fireclickdetector(ClickDetector, 0, "MouseHoverEnter") -- Output: Player Fired HoverEnter
+fireclickdetector(ClickDetector, 0, "MouseHoverLeave") -- Output: Player Fired HoverLeave
 ```
 
 ---
