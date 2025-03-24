@@ -166,7 +166,7 @@ end
 local DummyFunctionHash = getfunctionhash(DummyFunction)
 
 local Retrieved = filtergc("function", {
-    Hash = DummyFunctionHash, 
+    Hash = DummyFunctionHash, -- A C Closure will automatically fail this filter because its impossible to rebuild the bytecode of a C Closure
     IgnoreExecutor = false
 }, true)
 
@@ -184,7 +184,7 @@ local function DummyFunction()
 end
 
 local Retrieved = filtergc("function", { 
-    Constants = { "print", "game", "Players", "LocalPlayer", 1 },
+    Constants = { "print", "game", "Players", "LocalPlayer", 1 }, -- A C Closure will automatically fail this filter because a C Closure does not have Constants
     Upvalues = { 5 },
     IgnoreExecutor = false
 }, true)
