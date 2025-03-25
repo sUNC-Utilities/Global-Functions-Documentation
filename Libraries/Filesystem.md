@@ -190,7 +190,7 @@ function makefolder(path: string): ()
 
 ```luau
 makefolder("folder")
-print(isfolder("folder"))) -- Output: true
+print(isfolder("folder")) -- Output: true
 ```
 
 --- 
