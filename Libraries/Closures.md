@@ -41,6 +41,36 @@ OldFunction() -- Output: I am not hooked!
 
 ---
 
+## hookmetamethod
+
+This function takes any lua value that can have metatable and attempts to hook the specified metamethod of the lua value with the `hookfunction` function.
+
+Function can be safely implemented in Lua if `hookfunction` is properly implemented in C code. 
+```luau
+function hookmetamethod(object: table | Instance | userdata, metamethod_name: string, hook: (...) -> (...)): (...) -> (...)
+```
+
+### Parameter
+
+- `object` - The object which has the metatable (eg. game)
+- `metamethod_name` - The name of the metamethod to hook (eg. __index)
+- `hook` - The function that will be used as a hook 
+
+### Example
+```luau
+local original; original = hookmetamethod(game, "__index", function(...)
+    if not checkcaller() then return original(...) end
+    local key = select(2, ...)
+    print(key)
+    return original(...)
+end)
+
+print(game.PlaceId) -- Hook Output: PlaceId
+hookmetamethod(game, "__index", original) -- Restores game's __index
+```
+
+---
+
 ## newcclosure
 
 > [!WARNING]
