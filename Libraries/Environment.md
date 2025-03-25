@@ -37,7 +37,7 @@ function getrenv(): { any }
 ```luau
 getrenv().game = nil -- game scripts won't be able to access game
 getrenv().warn = "Hello"
-print(type(warn)) -- Output: function
+print(type(warn)) -- Output: string
 ```
 
 ---
