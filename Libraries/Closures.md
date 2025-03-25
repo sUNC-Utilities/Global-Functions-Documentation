@@ -66,6 +66,7 @@ end)
 
 local _ = game.PlaceId
 hookmetamethod(game, "__index", Original) -- Restores game's __index
+
 -- Output: PlaceId
 ```
 
