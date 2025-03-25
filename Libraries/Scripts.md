@@ -156,7 +156,7 @@ end
 Returns all the loaded modules in the caller's global state, CoreScripts should be filtered by default.
 
 ```luau
-function getloadedmodules(): { ModuleScript }
+function getloadedmodules(excludeCore): { ModuleScript }
 ```
 
 ### Example
