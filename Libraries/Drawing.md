@@ -49,7 +49,7 @@ The class which all drawing objects will inherit.
 | Transparency    | number                                                                                     | The opacity of the drawing (1 - opaque, 0 - transparent).           |
 | Color           | Color3                                                                                     | The color of the drawing.                                           |
 | __OBJECT_EXISTS | boolean                                                                                    | Whether the object exists.                                          |
-| Destory(): ()   | function                                                                                   | Destroys the drawing.                                               |
+| Destroy(): ()   | function                                                                                   | Destroys the drawing.                                               |
 
 ### Line
 
