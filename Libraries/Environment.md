@@ -110,7 +110,7 @@ function filtergc(filter_type: "function" | "table", filter_options: FunctionFil
 | Key             | Description                                                                             | Default |
 | --------------- | --------------------------------------------------------------------------------------- | ------- |
 | `Name`          | If not empty, also include functions with this name.                                     |  `nil`  |
-| `IgnoreExecutor`| If true, also include functions made in the executor.                                    |  `true` |
+| `IgnoreExecutor`| If true, exclude functions made in the executor.                                    |  `true` |
 | `Hash`          | If not empty, also include functions with the specified hash of their bytecode.                  |  `nil`  |
 | `Constants`     | If not empty, also include functions with constants that match all values in this table. |  `nil`  |
 | `Upvalues`      | If not empty, also include functions with upvalues that match all values in this table.  |  `nil`  |
