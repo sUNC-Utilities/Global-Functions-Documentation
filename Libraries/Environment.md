@@ -166,7 +166,7 @@ end
 local DummyFunctionHash = getfunctionhash(DummyFunction)
 
 local Retrieved = filtergc("function", {
-    Hash = DummyFunctionHash, -- A C Closure will automatically fail this filter because its impossible to rebuild the bytecode of a C Closure
+    Hash = DummyFunctionHash, -- A C Closure will automatically fail this filter because it's impossible to rebuild the bytecode of a C Closure
     IgnoreExecutor = false
 }, true)
 
