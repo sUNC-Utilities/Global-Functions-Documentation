@@ -137,7 +137,7 @@ local Retrieved = filtergc("function", {
     IgnoreExecutor = false
 })
 
-print(typeof(Retreived)) -- Output: table
+print(typeof(Retrieved)) -- Output: table
 print(Retrieved[1] == DummyFunction) -- Output: true
 ```
 
@@ -151,7 +151,7 @@ local Retrieved = filtergc("function", {
     IgnoreExecutor = false
 }, true)
 
-print(typeof(Retreived)) -- Output: function
+print(typeof(Retrieved)) -- Output: function
 print(Retrieved == DummyFunction) -- Output: true
 ```
 
@@ -226,5 +226,5 @@ local Retrieved = filtergc("table", {
     Metatable = getmetatable(DummyTable) 
 }, true)
 
-print(Retreived == DummyTable) -- Output: true
+print(Retrieved == DummyTable) -- Output: true
 ```
