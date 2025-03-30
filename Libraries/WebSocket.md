@@ -2,120 +2,53 @@
 
 The **WebSocket** class provides a simple interface for sending and receiving data over a WebSocket connection.
 
----
+### Constructor - WebSocket.connect
 
-## WebSocket.connect
-
-Establishes a WebSocket connection to the specified URL.
-
-```luau
-function WebSocket.connect(url: string): WebSocketConnection
-```
-
-### Parameters
-
-- `url` - The URL of the WebSocket server to connect to.
-
-### Example
-
-```luau
-local ws = WebSocket.connect("wss://echo.websocket.org")
-
-if ws then
-    print("WebSocket connection established.")
-else
-    warn("Failed to connect to WebSocket server.")
-end
+```lua
+function WebSocket.connect(url: string): WebSocket
 ```
 
 ---
 
-## WebSocketConnection.Connected
+### WebSocket Methods
 
-A boolean which indicates whether the Connection is still online.
+| Method | Description |
+| ------ | ----------- |
+| `Send(message: string): ()` | Sends a message over the WebSocket connection. |
+| `Close(): ()` | Closes the WebSocket connection. |
 
-```luau
-WebSocketConnection.Connected: boolean
-```
+### WebSocket Events
 
-### Example
-
-```luau
-print(ws.Connected) -- prints "true" since we havent closed the connection yet
-```
-
----
-
-## WebSocketConnection.Send
-
-Sends data over the WebSocket connection.
-
-```luau
-WebSocketConnection:Send(data: string): nil
-```
-
-### Parameters
-
-- `data` - The data to send.
-
-### Example
-
-```luau
-ws:Send("Hello, server!")
-```
+| Event | Description |
+| ----- | ----------- |
+| `OnMessage(message: string): ()` | Triggered when a message is received over the WebSocket connection. |
+| `OnClose(): ()` | Triggered when the WebSocket connection closes. |
 
 ---
 
-## WebSocketConnection.Close
-
-Closes the WebSocket connection.
+### Example - `WebSocket.connect`
 
 ```luau
-WebSocketConnection:Close(): nil
+local ws = WebSocket.connect("ws://echo.websocket.events")
+print(ws) -- Output: WebSocket
 ```
 
-### Example
+## Example - `OnMessage, Send`
 
 ```luau
-ws:Close()
-```
-
----
-
-## WebSocketConnection.OnMessage
-
-This event is fired when a message is received from the server.
-
-```luau
-WebSocketConnection.OnMessage: RBXScriptSignal<string>
-```
-
-### Parameters
-
-- `message` - The message which was sent from the connection.
-
-### Example
-
-```luau
-ws.OnMessage:Connect(function(message: string)
-    print("Received message:", message)
+local ws = WebSocket.connect("ws://echo.websocket.events")
+ws.OnMessage:Connect(function(message)
+    print(message)
 end)
+ws:Send("Hello") -- Output: Hello
 ```
 
----
-
-## WebSocketConnection.OnClose
-
-This event is fired when the WebSocket connection is closed.
+## Example - `OnClose, Close`
 
 ```luau
-WebSocketConnection.OnClose: RBXScriptSignal
-```
-
-### Example
-
-```luau
+local ws = WebSocket.connect("ws://echo.websocket.events")
 ws.OnClose:Connect(function()
-    print("Websocket connection has closed!")
+    print("Closed")
 end)
+ws:Close() -- Output: Closed
 ```
