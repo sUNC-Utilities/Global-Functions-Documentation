@@ -153,7 +153,7 @@ end
 
 ## getloadedmodules
 
-Returns all the loaded modules in the caller's global state, CoreScripts should be filtered by default.
+Returns all the loaded modules in the caller's global state.
 
 ```luau
 function getloadedmodules(): { ModuleScript }
