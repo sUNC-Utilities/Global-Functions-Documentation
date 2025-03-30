@@ -25,7 +25,7 @@ print(ExecName, ExecVersion) -- Output: "YourName 0.0.1"
 Sends an HTTP request with the given options, yielding until the request is finished, and returns the response.
 
 ```luau
-function request(options: HttpRequest): HttpResponse
+function request(options: Request): Response
 ```
 
 ### Request
@@ -78,7 +78,7 @@ end
 
 print(Response.StatusCode) -- Output: 200
 print(Response.Success) -- Output: true
-print(RetrievedFingerprint) -- Output: Prefix-Fingerprint (prefix being the exec's name)
+print(RetrievedFingerprint) -- Output: Prefix-Fingerprint ("Prefix" being the exec's name)
 ```
 
 ```luau
