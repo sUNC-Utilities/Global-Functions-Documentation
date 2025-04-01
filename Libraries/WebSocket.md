@@ -10,14 +10,14 @@ function WebSocket.connect(url: string): WebSocket
 
 ---
 
-### WebSocket Methods
+### `WebSocket` Methods
 
 | Method | Description |
 | ------ | ----------- |
 | `Send(message: string): ()` | Sends a message over the WebSocket connection. |
 | `Close(): ()` | Closes the WebSocket connection. |
 
-### WebSocket Events
+### `WebSocket` Events
 
 | Event | Description |
 | ----- | ----------- |
