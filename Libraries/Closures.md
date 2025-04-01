@@ -259,7 +259,7 @@ print(getfenv(ClonedFunction) == getfenv(DummyFunction)) -- Output: true
 
 ## getfunctionhash
 
-Returns a Hex represented SHA384 hash of the provided function's re-built bytecode
+Returns a Hex represented SHA384 hash of the provided function's re-built bytecode, for C closures the c.f pointer should be hashed.
 
 ```luau
 function getfunctionhash(function_to_hash): string
