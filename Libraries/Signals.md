@@ -12,7 +12,7 @@ Functions that allow interaction with RBXScriptSignals and RBXScriptConnections.
 Returns the connections of the specified signal.
 
 ```luau
-function getconnections(signal: RBXScriptSignal): {Connection} | nil
+function getconnections(signal: RBXScriptSignal): {Connection}
 ```
 
 ### Connection
