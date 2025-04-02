@@ -47,7 +47,7 @@ This function takes any lua value that can have metatable and attempts to hook t
 
 Function can be safely implemented in Lua if `hookfunction` is properly implemented in C code. 
 ```luau
-function hookmetamethod(object: table | Instance | userdata, metamethod_name: string, hook: (...any) -> (...any)): (...any) -> (...any)
+function hookmetamethod(object: {[any]: any} | Instance | userdata, metamethod_name: string, hook: (...any) -> (...any)): (...any) -> (...any)
 ```
 
 ### Parameter
