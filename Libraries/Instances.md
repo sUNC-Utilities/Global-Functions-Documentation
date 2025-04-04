@@ -76,7 +76,7 @@ print(Player == ClonedPlayer) -- Output: false
 
 ## compareinstances
 
-Checkks if two instances are equal, used for clonerefed instances as normal equality check fails on them.
+Checks if two instances are equal, used for clonerefed instances as normal equality check fails on them.
 
 ```luau
 function compareinstances(object1: Instance, object2: Instance): boolean
