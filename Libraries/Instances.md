@@ -74,6 +74,30 @@ print(Player == ClonedPlayer) -- Output: false
 
 ---
 
+## compareinstances
+
+Checkks if two instances are equal, used for clonerefed instances as normal equality check fails on them.
+
+```luau
+function compareinstances(object1: Instance, object2: Instance): boolean
+```
+
+### Parameter
+
+- `object1` - The instance to check.
+- `object2` - The instance to check the first instance with.
+
+### Example
+
+```luau
+print(compareinstances(game, game)) -- Output: true
+print(compareinstances(game, workspace)) -- Output: false
+print(compareinstances(game, cloneref(game))) -- Output: true
+print(game == cloneref(game)) -- Output: false
+```
+
+---
+
 ## gethui
 
 > [!NOTE]
