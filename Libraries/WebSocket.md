@@ -2,7 +2,7 @@
 
 The **WebSocket** class provides a simple interface for sending and receiving data over a WebSocket connection.
 
-### Constructor - WebSocket.connect
+## WebSocket.connect
 
 ```lua
 function WebSocket.connect(url: string): WebSocket
