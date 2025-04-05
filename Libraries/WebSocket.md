@@ -33,7 +33,7 @@ local ws = WebSocket.connect("ws://echo.websocket.events")
 print(ws) -- Output: WebSocket
 ```
 
-## Example - `OnMessage, Send`
+### Example - `OnMessage, Send`
 
 ```luau
 local ws = WebSocket.connect("ws://echo.websocket.events")
@@ -43,7 +43,7 @@ end)
 ws:Send("Hello") -- Output: Hello
 ```
 
-## Example - `OnClose, Close`
+### Example - `OnClose, Close`
 
 ```luau
 local ws = WebSocket.connect("ws://echo.websocket.events")
