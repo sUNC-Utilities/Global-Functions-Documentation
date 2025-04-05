@@ -12,7 +12,7 @@ Hooks a function with another wanted function, returning the original unhooked f
 > All possible hooking closure pairs should be supported throughout L, NC, C. (NC = newcclosure)
 
 ```luau
-function hookfunction<A1..., R1..., A2..., R2...>(function_to_hook: (A1...) -> R1..., function_hook: (A2...) -> R2...): (A1...) -> R1...
+function hookfunction<A1..., R1...>(function_to_hook: (A1...) -> R1..., hook: (A1...) -> R1...): (A1...) -> R1...
 ```
 
 ### Parameters
