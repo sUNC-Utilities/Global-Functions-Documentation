@@ -259,10 +259,10 @@ print(getfenv(ClonedFunction) == getfenv(DummyFunction)) -- Output: true
 
 ## getfunctionhash
 
-Returns a Hex represented SHA384 hash of the provided function's re-built bytecode, C closures aren't supported.
+Returns the ***hex-represented*** [SHA-384 hash](https://en.wikipedia.org/wiki/SHA-3) of a provided function's instructions (code) and constants.
 
 ```luau
-function getfunctionhash(function_to_hash): string
+function getfunctionhash(function_to_hash: (...any) -> (...any)): string
 ```
 
 ### Example
@@ -281,8 +281,11 @@ end
 local DummyFunction0 = function() end
 local DummyFunction1 = function(...) end
 local DummyFunction2 = function() end
+local DummyFunction3 = function() return "Constant" end
+local DummyFunction4 = function() return "Constant2" end
 
 print(isSHA384Hex(getfunctionhash(DummyFunction0))) -- Output: true
 print(getfunctionhash(DummyFunction0) == getfunctionhash(DummyFunction1)) -- Output: false
 print(getfunctionhash(DummyFunction0) == getfunctionhash(DummyFunction2)) -- Output: true
+print(getfunctionhash(DummyFunction3) == getfunctionhash(DummyFunction4)) -- Output: false
 ```
