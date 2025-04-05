@@ -155,7 +155,7 @@ print(typeof(Retrieved)) -- Output: function
 print(Retrieved == DummyFunction) -- Output: true
 ```
 
-## Usage of `options` parameter
+### Usage of `options` parameter
 
 Usage of `Hash`:
 ```luau
