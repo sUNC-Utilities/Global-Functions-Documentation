@@ -18,7 +18,7 @@ function hookfunction<A1..., R1...>(function_to_hook: (A1...) -> R1..., hook: (A
 ### Parameters
 
 - `function_to_hook` - The function that will be hooked
-- `function_hook` - The function that will be used as a hook
+- `hook` - The function that will be used as a hook
 
 ### Example
 
