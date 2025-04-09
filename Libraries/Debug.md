@@ -82,6 +82,9 @@ print(Result) -- Output: nil
 -- Optimization Level: 1, Debug Level: 1
 ```
 
+> [!WARNING]
+> If `game` is a mutable global, the indexes will be different
+
 ```luau
 print(debug.getconstant(print)) -- Should error due to being a C closure
 ```
@@ -114,6 +117,9 @@ debug.setconstant(DummyFunction, 4, "Players")
 DummyFunction() -- Output: Players
 -- Optimization Level: 1, Debug Level: 1
 ```
+
+> [!WARNING]
+> If `game` is a mutable global, the index will be different
 
 ---
 
