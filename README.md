@@ -1,3 +1,9 @@
+# MOVED TO [NEW DOCUMENTATION](https://github.com/sUNC-Utilities/docs.sunc.su)
+Please do not attempt to make any commits to this repository. It will be archived soon in favour of the new documentation.
+
+<details>
+<summary>Old README</summary>
+
 # sUNC Introduction
 
 ## What is "sUNC"?
@@ -22,3 +28,5 @@ Not in the near future, we hope. However, if sUNC would be discontinued, we will
 # Credits
 
 - [Original UNC Documentation](https://github.com/unified-naming-convention/NamingStandard/tree/main)
+
+</details>
