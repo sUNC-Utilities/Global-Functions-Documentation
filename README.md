@@ -1,5 +1,10 @@
-# MOVED TO [NEW DOCUMENTATION](https://github.com/sUNC-Utilities/docs.sunc.su)
-Please do not attempt to make any commits to this repository. It will be archived soon in favour of the new documentation.
+# MOVED TO NEW DOCUMENTATION
+
+This is the repository for the old documentation. It is no longer in use, in favour of the new documentation.
+
+## New Documentation at [docs.sunc.su](https://docs.sunc.su)
+- [Documentation Website](https://docs.sunc.su)
+- [GitHub Repository for docs.sunc.su](https://github.com/sUNC-Utilities/docs.sunc.su)
 
 <details>
 <summary>Old README</summary>
